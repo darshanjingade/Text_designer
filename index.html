@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Name Designer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="prj27.css".css">
+    <link rel="shortcut icon" href="images/search.png">
+</head>
+<body ng-app="myApp" ng-controller="myCont">
+    <div  class="divtag" >
+       <div>First Name : <br><input type="text" ng-model="fName" ng-change="ch()"></div> <br>
+       <div>Last Name  : <br><input type="text" ng-model="lName" ng-change="ch()"></div><br>
+        <div>Color  : 
+            <input type="color" ng-model="color1" ng-change="col()">{{color1}}
+        </div><br>
+       <div>Size  : 
+        <input type="button" value="+" ng-click="add()" class="but">
+        <input type="button" value="-" ng-click="sub()" class="but"> 
+            Style  : 
+            <input type="button" value="<" ng-click="minus()" class="but">
+            <input type="button" value=">" ng-click="plus()" class="but"> 
+        </div><br>
+        <div>{{fonts[count]}}</div><br>
+        <div><input type="button" value="Reset" ng-click="reset()" id="but"></div> 
+    </div>
+    <span ng-show="ret" id="h1tag">{{fName}} {{lName}}</span>
+    
+</body>
+<script src="prj27.js"></script>
+</html>
